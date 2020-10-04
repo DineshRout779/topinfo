@@ -1,0 +1,161 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box ;
+    font-family: Verdana;
+    text-decoration:none;
+    font-family: 'Dm Sans', sans-serif;
+}
+
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:16px 20px;
+    background-color:#fff;
+    position:sticky;
+    top:0;
+    z-index:100;
+    box-shadow:0 0 20px gray;
+}
+
+.logo{
+    font-size:22px;
+    font-weight:600;
+}
+
+.nav{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0; left: -100%;
+    height: 100vh;
+    background-color: #fff;
+    padding-top: 72px;
+    box-shadow: 0 0 20px gray;
+    transition: left 0.5s ease-in-out;
+}
+
+.nav.open{
+    left: 0;
+}
+
+.nav a{
+    padding: 10px 50px;
+    font-weight: bold;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav a i{
+    color: #333;
+    margin-left: 25px;
+}
+
+.nav a:hover{
+    background-color: rgb(217, 225, 231);
+}
+
+.menu{
+    width:34px;
+    height:40px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    cursor: pointer;
+}
+
+.bar{
+    width:100%;
+    height:3px;
+    margin:3px;
+    background-color:#333;
+    border-radius:5px;
+}
+
+h3{
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    color:#333;
+    padding: 0 20px;
+}
+
+.card__container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 50px auto;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 1fr;
+    grid-gap: 30px;
+    padding: 0 20px;
+}
+
+.card{
+    width:100%;
+    /* max-width:320px; */
+    box-shadow:0px 0px 20px #999;
+    transition: box-shadow,transform 0.5s ease-in-out;
+}
+
+.card:hover{
+    box-shadow:0px 0px 30px rgb(78, 76, 76);
+    transform: scale(1.02);
+}
+
+img{
+    width:100%;
+    height:auto;
+}
+
+.card__img{
+    font-size:0;
+}
+
+.card__title{
+    font-size:22px;
+    padding:16px;
+    
+}
+
+.card__menu{
+    padding:26px 16px;
+}
+
+.card__menu a{
+    padding: 8px 16px;
+    border:1px solid #6699ff;
+    background-color:#ffffff;
+    color:rgb(0, 0, 0);
+    transition:all 0.5s ease;
+}
+
+.card__menu a:hover{
+    background-color:#6699ff;
+    color:rgb(255, 255, 255);
+}
+
+@media (max-width: 1200px) {
+    .card__container{
+        max-width: 1000px;
+    }
+    h3{
+        max-width: 1000px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .card__container{
+        grid-template-columns: auto auto;
+    }
+}
+
+@media (max-width: 600px){
+    .card__container{
+        grid-template-columns: auto;
+    }
+}
