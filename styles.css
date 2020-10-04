@@ -118,6 +118,10 @@ img{
     font-size:0;
 }
 
+.card__img img{
+    border-radius: 5px 5px 0 0;
+}
+
 .card__title{
     font-size:22px;
     padding:16px;
@@ -130,7 +134,7 @@ img{
 
 .card__menu a{
     padding: 8px 16px;
-    border:1px solid #6699ff;
+    border:1px solid #d0d5db;
     background-color:#ffffff;
     color:rgb(0, 0, 0);
     transition:all 0.5s ease;
